@@ -9,10 +9,12 @@
  */
 int main(void)
 {
+	ssize_t len, bytes_written;
 	char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	ssize_t len = 59;
 
-	if (write(2, message, len) != len)
+	len = 59;
+	bytes_written = write(STDERR_FILENO, message, len);
+	if (bytes_written != len)
 		return (1);
 
 	return (1);
