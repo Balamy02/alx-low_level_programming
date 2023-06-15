@@ -13,8 +13,8 @@ int main(void)
 	ssize_t len = 59;
 
 	if (write(2, message, len) != len)
-		return 1;
+		return (1);
 
-	return 1;
+	return (1);
 }
 
