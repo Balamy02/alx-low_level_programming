@@ -9,13 +9,11 @@
  */
 int main(void)
 {
-	ssize_t len, bytes_written;
-	char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	ssize_t len;
+	int stderr_fd = 2;
 
-	len = 59;
-	bytes_written = write(STDERR_FILENO, message, len);
-	if (bytes_written != len)
-		return (1);
+	len = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n") - 1;
+	write(stderr_fd, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", len);
 
 	return (1);
 }
