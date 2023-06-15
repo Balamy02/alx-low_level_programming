@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -18,6 +17,6 @@ int main(void)
 	if (write(2, message, len) != len)
 		exit(1);
 
-	return 1;
+	return (1);
 }
 
