@@ -3,18 +3,18 @@
 /**
  * main - Entry point
  *
- * Description: Prints a specific sentence to the standard error.
+ * Description: Prints a quote using the write function.
  *
- * Return: Always 1 (Failure)
+ * Return: Always 1 (Error)
  */
 int main(void)
 {
-	ssize_t len;
-	int stderr_fd = 2;
-	const char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char quote[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	ssize_t len = sizeof(quote) - 1;
+	ssize_t bytes_written = write(2, quote, len);
 
-	len = sizeof("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n") - 1;
-	write(stderr_fd, str, len);
+	if (bytes_written != len)
+		return (1);
 
 	return (1);
 }
