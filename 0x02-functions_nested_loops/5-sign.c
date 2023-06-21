@@ -26,6 +26,6 @@ int print_sign(int n)
 	}
 
 	/* Default case */
-	return 0;
+	return (0);
 }
 
