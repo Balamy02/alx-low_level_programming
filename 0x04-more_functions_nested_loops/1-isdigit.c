@@ -1,22 +1,31 @@
+// main.h
+#ifndef MAIN_H
+#define MAIN_H
+
+int _isdigit(int c);
+
+#endif /* MAIN_H */
+
+
+// 1-isdigit.c
 #include "main.h"
 
 /**
- * _isdigit - check if numbers are 0 - 9
- * @c: char to be checked
+ * _isdigit - check if a character is a digit (0-9)
+ * @c: character to be checked
  *
- * Return: 0 or 1
+ * Return: 1 if c is a digit, 0 otherwise
  */
-
 int _isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+    if (c >= '0' && c <= '9')
+        return (1);
+    else
+        return (0);
 }
 
 
-1-main.c
+// 1-main.c
 #include "main.h"
 #include <stdio.h>
 
